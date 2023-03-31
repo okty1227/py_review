@@ -1,4 +1,4 @@
-# Review - super() function
+# super() function
 ## ```super().__init__()``` 與 直接使用母類別的名稱繼承的差異
 #### 本文會使用到的Demo Code情境如下
 ```
