@@ -1,6 +1,6 @@
 # super() function
 ## ```super().__init__()``` 與 直接使用母類別的名稱繼承的差異
-#### 本文會使用到的Demo Code情境如下
+#### 本文將使用到的Demo Code情境如下
 ```
 class Art():
 	def __init__(self):
@@ -28,7 +28,10 @@ class TainanArt(SouthArt,LocalArt): ##multi inheretance
 ### **<font color=#800000>```super().__init__()```和母類別繼承的效果相同</font>**
 何為單一繼承：
 * 類別架構如下的繼承方式便是單一繼承，也是最簡單的繼承架構
-
+```mermaid
+graph TD
+A(Art) -->B(SouthArt)
+```
 <img  src="https://i.imgur.com/MmLo726.png"  width="30%" height="15%">
 
 ```
@@ -56,8 +59,12 @@ Art Museum
 ```super()```會檢查多個父繼承的母類別狀態，並避免重複
 
 何為鑽石型態的多重繼承
-<img src='https://i.imgur.com/1SH0K1Y.png' height=15% width=30%>
-
+```mermaid
+graph TD
+A(Art) -->B(SouthArt)
+A(Art) -->C(LocaArt)
+C(LocaArt)-->D(TainanArt)
+B(SouthArt)-->D(TainanArt)
 ```
 class Art():
 	def __init__(self):
