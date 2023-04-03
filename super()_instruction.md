@@ -32,9 +32,6 @@ class TainanArt(SouthArt,LocalArt): ##multi inheretance
 graph TD
 A(Art) -->B(SouthArt)
 ```
-<img  src="https://i.imgur.com/MmLo726.png"  width="30%" height="15%">
-
-```
 class Art():
 	def __init__(self):
 		print('Art Museum')
